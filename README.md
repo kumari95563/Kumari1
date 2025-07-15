@@ -1,17 +1,15 @@
-class bank():
-    def __init__self(self,balance):
-        self.__balance=balance
-    def deposite(self,amount):
-        self.__balance+=amount
-    def withdraw(self,amount):
-        if amount>self.__balance:
-            print("In sufficient balance")
-        else:
-            self.__balance-=amount
-    def getbal(self):
-        return self.__balance
-obj=bank(10000)
-obj.deposite(500)
-print(obj.getbal())
-obj.withdraw(5016)
-print(obj.getbal())
+class User(object):
+def __init__(self, firstname):
+self.firstname = firstname
+@property
+def name(self):
+return self.firstname
+class Animal(object):
+pass
+class Fox(Animal):
+name = "Fox"
+class Bear(Animal):
+name = "Bear"
+# Use the .name attribute (or property) regardless of the type
+for a in [User("SampleOutput"), Fox(), Bear()]:
+print(a.name)
